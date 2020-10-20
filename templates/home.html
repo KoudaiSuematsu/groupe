@@ -20,12 +20,12 @@
 
     <form action="/edit" method="POST">
         年齢：<input type="int" name="age">
-        性別：<input type="int" name="sx_code">
-        <select name="sx_num">
-            <option value="1" selected>男性</option>
-            <option value="2">女性</option>
-        </select> 
-        <input type="int" name="sx_code">
+        性別：<select type="text" name="gender">
+                <option value="men" selected>男性</option>
+                <option value="women">女性</option>
+            </select> 
+
+        <!-- <input type="int" name="sx_code"> -->
         コメント：<input type="text" name="comment">
         <input type="submit" name="save" value="送信">
     </form>

@@ -30,14 +30,16 @@ def funny():
 def comment():
     # 入力フォームから値を取得
     age = request.form.get("age")
-    sx_code = request.form.get("sx_code")
+    gender = request.form.get("gender")
+
     comment = request.form.get("comment")
+
     # DB接続する
     conn = sqlite3.connect("comment.db")
     # データベースの中身が見れるようにする
     c = conn.cursor()
     # SQL文 IDを取得してくる、条件に名前とパスワードを用いる
-    c.execute("insert into users values(null,?,?,?)", (age, sx_code, comment))
+    c.execute("insert into users values(null,?,?,?)", (age, gender, comment))
     conn.commit()
     # 接続終了
     c.close()
