@@ -26,6 +26,26 @@ def funny():
     return render_template("funny.html")
 
 
+@app.route("/edit", methods=["POST"])
+def comment():
+    # 入力フォームから値を取得
+    age = request.form.get("age")
+    gender = request.form.get("gender")
+
+    comment = request.form.get("comment")
+
+    # DB接続する
+    conn = sqlite3.connect("comment.db")
+    # データベースの中身が見れるようにする
+    c = conn.cursor()
+    # SQL文 IDを取得してくる、条件に名前とパスワードを用いる
+    c.execute("insert into users values(null,?,?,?)", (age, gender, comment))
+    conn.commit()
+    # 接続終了
+    c.close()
+    return render_template("edit.html")
+
+
 # # @app.route("/")
 # # def helloworld():
 # #     return "Hello World!"
