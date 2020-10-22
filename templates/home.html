@@ -1,27 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div style="background: #ffffff; height: auto; width: 100%;">
+<div class="homebox" style="background-color: #f5eb96; height: 100%; width: 100%;">
     <center style="font-size: 25px; color: #040a20;">
-        <p style="margin: 15px;">日々の暮らしに潤いを</p>
-        <p style="margin: 15px;">チョットした変換でいつもの言葉を</p>
-        <p style="margin: 15px;">喜び言葉に変換してみませんか？</p>
+        <p class="del_margin" style="margin: 15px;">日々の暮らしに潤いを</p>
+        <p class="phrase" style="margin: 15px;">チョットした変換でいつもの言葉を</p>
+        <p class="phrase" style="margin: 15px;">喜び言葉に変換してみませんか？</p>
     </center>
 
-    <section style="display: flex; justify-content:center; align-items: center;">
-        <h1 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">子育て編</h1>
+    <section style="display: flex; justify-content:space-around; align-items: center;">
+        <div class="chapter">
             <a href="/childcare"><img src="https://images.unsplash.com/photo-1484665754804-74b091211472?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjYzNDZ9
             " style="width: 300px; height: 250px;"  alt="子育て編"></a>
-        <h2 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">ビジネス編</h2>
+            <h1 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">子育て編</h1>
+        </div>
+        <div class="chapter">
             <a href="/business"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjYzNDZ9
             " style="width: 300px; height: 250px;"  alt="ビジネス編"></a>
-        <h3 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">面白変換</h3>
+            <h2 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">ビジネス編</h2>
+        </div>
+
+        <div class="chapter">
             <a href="/funny"><img src="https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG6CX7bFaQ6O-4GUHsIE4EGws6ATali6WH8OlPgh11292H5zufFCy39hjAdYM2QuxdddOPIRk1miDiszdXVpQZwB67TtehXDzO5vrxpIrn-7p7M8wm2RDU82vmIFN1Pv4RYVsWppXN31FUKYPTlY68-0UMdFe7X7o07KLkKqviYPiGk7Z1olRbzJnj0EY3vHGYydTcsVFFQqPX4fk7sjYcvrtREso2S4kPX5on2PJw3eq22E6MX773b0XzGdKb1eUk17lSTFFLWdhBDnMK2mCvJWDZNRaifXhNCs_BugWVA5o/1bc8508b4d6d7e1715a4d4ccc790b093.jpg
             " style="width: 300px; height: 250px;"  alt="面白変換"></a>
+            <h3 style="font-size: 40px; color: #040a20; margin-right: 15px; margin-left: 15px;">面白変換</h3>
+        </div>
+       
     </section>
     
     <aside style="text-align: center;">
-        <p style="font-size: 30px; color: #040a20;" margin-bottom: 10px; margin-top: 30px; >☟お問い合わせはこちら☟</p>
+        <p style="font-size: 30px; color: #040a20;" margin-bottom: 20px; margin-top: 70px; >☟お問い合わせはこちら☟</p>
             <form action="/edit" method="POST" style="font-size: 30px;">
                 年齢：<input type="int" name="age" style="font-size: 30px;">
                 性別：<select type="text" name="gender" style="font-size: 30px;">
@@ -35,11 +42,11 @@
             </form>
     </aside>
 
-    <a href="/funny"><img src="https://images.unsplash.com/photo-1588621332104-5e128b074d51?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjYzNDZ9 
-    " style="width: 200px; height: 200px;"  alt="面白変換"></a>
+    <!--<a href="/funny"><img src="https://images.unsplash.com/photo-1588621332104-5e128b074d51?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjYzNDZ9 
+    " style="width: 200px; height: 200px;"  alt="面白変換"></a>-->
 </div>
 
-    <form action="/edit" method="POST">
+    <!--<form action="/edit" method="POST">
         年齢：<input type="int" name="age">
         性別：<select type="text" name="gender">
                 <option value="men" selected>男性</option>
@@ -47,6 +54,6 @@
             </select> 
         コメント：<input type="text" name="comment">
         <input type="submit" name="save" value="送信">
-    </form>
+    </form>-->
 
 {% endblock %}
