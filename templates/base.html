@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!--static 追加 css変更-->
 </head>
 
 <header>
+
+    <div style="background:#3E4B7B; height: 200px; width: 100%;">
+            <a href="/" style="color: #ffee51; font-size: 64px; margin: 0 auto; ">迷ったら、ポジ☆ぴよ！</a>
+            <a href="/" style="color: #FFFFFF; font-size: 20px;">お問い合わせはこちら</a>
+
     <div style="background:#3E4B7B; height: 200px; width: 100%; ">
         <p style="text-align:center;padding-top: 20px;">
             <a href="/" style="color: #FFFFFF; text-decoration: none; font-size: 64px; ">迷ったら、ポジ☆ぴよ！</a>
@@ -16,25 +22,32 @@
         <p style="text-align:right; margin-right: 50px;">
             <a href="/" style="color: #FFFFFF;font-size: 20px;">お問い合わせはこちら</a>
         </p>
+
     </div>
         
     
 </header>
 
-<body style="background: #FFFFFF;">
+<body>
+    <!--<div style="background: #FFFFFF; height: 500px; width: 100%;"></div>-->
+    
+    
+    
     {% block content %}
     {% endblock %}
     
-    <!-- <p style="width: 100%;color: white;background-color: black;">ここはヘッダーです</p>
-    <button onclick="location.href='/'">top </button>
-    <button onclick="location.href='/template'">あいさつ </button>
-    <button onclick="location.href='/mypage'">マイページ </button>
-    <button onclick="location.href='/sunabaco'">すなばこ </button> -->
 </body>
+<footer style="background:#3E4B7B; height: 150px; width: 100%;">
+    <a href="/childcare" style="color: #FFFFFF;font-size: 28px;">子育て編</a>
+    <a href="/business" style="color: #FFFFFF;font-size: 28px;">ビジネス編</a>
+    <a href="/funny" style="color:#FFFFFF;font-size: 28px;">面白変換</a>
+    <a href="/" style="color: #FFFFFF;font-size: 28px;">HOME</a>
+
 <footer style="background:#3E4B7B; height: 200px; width: 100%;display:flex; justify-content: space-around;align-items: center;">
         <div><a href="/childcare" style="color: #FFFFFF;font-size: 28px;">子育て編</a></div>
         <div><a href="/business" style="color: #FFFFFF;font-size: 28px;">ビジネス編</a></div>
         <div><a href="/funny" style="color:#FFFFFF;font-size: 28px;">面白変換</a></div>
         <div><a href="/" style="color: #FFFFFF;font-size: 28px;">HOME</a></div>
+
 </footer>
 </html>
